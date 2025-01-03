@@ -54,7 +54,7 @@ src/
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/JoaoVitorMadeiro/Picpay-Challenge
    ```
 2. Instale as dependências:
    ```bash
