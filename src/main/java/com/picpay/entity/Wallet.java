@@ -3,6 +3,8 @@ package com.picpay.entity;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -49,10 +51,13 @@ public class Wallet {
         this.walletType = walletType;
     }
 
+    public Wallet(@NotBlank String fullname, @NotBlank String cpfCnpj, @NotBlank String email, @NotBlank String password, WalletType.@NotNull WalletTypeEnum walletType) {
+    }
+
 
     //<editor-fold desc="Methods">
     public boolean isTransferAllowedForWalletType() {
-        return this.walletType.equals(WalletType.Enum.USER.get());
+        return this.walletType.equals(WalletType.WalletTypeEnum.USER);
     }
 
     public boolean isBalancerBiggerThan(BigDecimal value) {

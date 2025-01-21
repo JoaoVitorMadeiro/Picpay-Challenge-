@@ -9,5 +9,5 @@ public record TransferDto (
         @NotNull
         @DecimalMin("0.01")
         BigDecimal value,
-        @NotNull Long payer,
-        @NotNull Long payee) { }
+        Long payer,
+        Long payee) { }
